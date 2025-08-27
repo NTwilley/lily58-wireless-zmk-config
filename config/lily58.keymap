@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        cmnd_z: ctrl_z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp Z>;
+            label = "CTRL_Z";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -74,7 +83,7 @@
             display-name = "CAD1";
             bindings = <
 &kp ESC    &kp V  &kp H  &kp G     &kp J     &kp K                          &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
-&kp TAB    &kp B  &kp F  &kp E     &kp I     &kp T                          &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
+&cmnd_z    &kp B  &kp F  &kp E     &kp I     &kp T                          &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
 &kp LCTRL  &kp D  &kp S  &kp R     &kp L     &kp O                          &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
 &kp LSHFT  &kp A  &kp U  &kp C     &kp M     &kp Q  &kp N        &kp RBKT   &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
                          &kp LALT  &kp LGUI  &mo 4  &kp ENTER    &kp SPACE  &kp X  &tog 3  &kp RGUI
