@@ -13,8 +13,22 @@
         cmnd_z: ctrl_z {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp Z>;
+            bindings = <&kp LG(Z)>;
             label = "CTRL_Z";
+        };
+
+        tab_right: tab_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "TAB_LEFT";
+        };
+
+        tab_left: tab_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(TAB))>;
+            label = "TAB_RIGHT";
         };
     };
 
@@ -82,22 +96,22 @@
         CAD1 {
             display-name = "CAD1";
             bindings = <
-&kp ESC    &kp V  &kp H  &kp G     &kp J     &kp K                          &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
-&cmnd_z    &kp B  &kp F  &kp E     &kp I     &kp T                          &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
-&kp LCTRL  &kp D  &kp S  &kp R     &kp L     &kp O                          &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
-&kp LSHFT  &kp A  &kp U  &kp C     &kp M     &kp Q  &kp N        &kp RBKT   &kp X  &kp X   &kp X     &kp X  &kp X  &kp X
-                         &kp LALT  &kp LGUI  &mo 4  &kp ENTER    &kp SPACE  &kp X  &tog 3  &kp RGUI
+&kp ESC    &kp V  &kp H  &kp G     &kp J     &kp K                          &kp N1    &kp N2    &kp N3     &kp N4      &kp N5        &kp MINUS
+&cmnd_z    &kp Q  &kp F  &kp E     &kp R     &kp T                          &kp N6    &kp N7    &kp N8     &kp N9      &kp N0        &kp EQUAL
+&kp LCTRL  &kp A  &kp S  &kp D     &kp L     &kp I                          &none     &kp UP    &none      &none       &none         &kp PERIOD
+&kp LSHFT  &kp O  &kp U  &kp C     &kp M     &kp B  &kp N        &none      &kp LEFT  &kp DOWN  &kp RIGHT  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
+                         &kp LALT  &kp LGUI  &mo 4  &kp ENTER    &kp SPACE  &none     &tog 3    &kp RGUI
             >;
         };
 
         CAD2 {
             display-name = "CAD2";
             bindings = <
-&kp ESC    &kp X     &kp X     &kp N7     &kp N8    &kp N9                           &kp N1    &kp N2    &kp N3     &kp N4  &kp N5        &kp MINUS
-&kp TAB    &kp X     &kp X     &kp N4     &kp N5    &kp N6                           &kp N6    &kp N7    &kp N8     &kp N9  &kp N0        &kp PERIOD
-&kp LCTRL  &kp X     &kp UP    &kp N1     &kp N2    &kp N3                           &kp X     &kp UP    &kp X      &kp X   &kp X         &kp X
-&kp LSHFT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp N0    &kp DOT  &kp SPACE    &kp RBKT   &kp LEFT  &kp DOWN  &kp RIGHT  &kp X   &kp C_VOL_DN  &kp C_VOL_UP
-                               &kp LALT   &kp LGUI  &mo 1    &kp ENTER    &kp SPACE  &kp X     &tog 0    &kp RGUI
+&kp ESC    &none      &none       &kp N7     &kp N8    &kp N9                           &kp N1    &kp N2    &kp N3     &kp N4      &kp N5        &kp MINUS
+&kp TAB    &tab_left  &tab_right  &kp N4     &kp N5    &kp N6                           &kp N6    &kp N7    &kp N8     &kp N9      &kp N0        &kp EQUAL
+&kp LCTRL  &none      &kp UP      &kp N1     &kp N2    &kp N3                           &none     &kp UP    &none      &none       &none         &kp PERIOD
+&kp LSHFT  &kp LEFT   &kp DOWN    &kp RIGHT  &kp N0    &kp DOT  &kp SPACE    &kp RBKT   &kp LEFT  &kp DOWN  &kp RIGHT  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
+                                  &kp LALT   &kp LGUI  &mo 1    &kp ENTER    &kp SPACE  &none     &tog 0    &kp RGUI
             >;
         };
     };
