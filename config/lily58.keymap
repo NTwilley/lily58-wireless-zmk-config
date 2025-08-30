@@ -107,11 +107,11 @@
         CAD2 {
             display-name = "CAD2";
             bindings = <
-&kp ESC    &none      &none       &kp N7     &kp N8    &kp N9                           &kp N1    &kp N2    &kp N3     &kp N4      &kp N5        &kp MINUS
-&kp TAB    &tab_left  &tab_right  &kp N4     &kp N5    &kp N6                           &kp N6    &kp N7    &kp N8     &kp N9      &kp N0        &kp EQUAL
-&kp LCTRL  &none      &kp UP      &kp N1     &kp N2    &kp N3                           &none     &kp UP    &none      &none       &none         &kp PERIOD
-&kp LSHFT  &kp LEFT   &kp DOWN    &kp RIGHT  &kp N0    &kp DOT  &kp SPACE    &kp RBKT   &kp LEFT  &kp DOWN  &kp RIGHT  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
-                                  &kp LALT   &kp LGUI  &mo 1    &kp ENTER    &kp SPACE  &none     &tog 0    &kp RGUI
+&kp ESC    &none      &none       &kp N7     &kp N8    &kp N9                               &kp N1    &kp N2    &kp N3     &kp N4      &kp N5        &kp MINUS
+&kp TAB    &tab_left  &tab_right  &kp N4     &kp N5    &kp N6                               &kp N6    &kp N7    &kp N8     &kp N9      &kp N0        &kp EQUAL
+&kp LCTRL  &none      &kp UP      &kp N1     &kp N2    &kp N3                               &none     &kp UP    &none      &none       &none         &kp PERIOD
+&kp LSHFT  &kp LEFT   &kp DOWN    &kp RIGHT  &kp N0    &kp DOT  &kp BACKSPACE    &kp RBKT   &kp LEFT  &kp DOWN  &kp RIGHT  &kp K_MUTE  &kp C_VOL_DN  &kp C_VOL_UP
+                                  &kp LALT   &kp LGUI  &mo 1    &kp ENTER        &kp SPACE  &none     &tog 0    &kp RGUI
             >;
         };
     };
